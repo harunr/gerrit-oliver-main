@@ -1,0 +1,263 @@
+/*
+	Title:		   Your title here
+	Date:		   day moneth, year
+    Coder Name :   
+-------------------------------------	
+*/
+
+/* Fonts style */
+
+
+
+
+@font-face {
+    font-family: 'Univers LT Std';
+    src: url('../fonts/UniversLTStd-LightCn.eot');
+    src: url('../fonts/UniversLTStd-LightCn.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/UniversLTStd-LightCn.woff2') format('woff2'),
+        url('../fonts/UniversLTStd-LightCn.woff') format('woff'),
+        url('../fonts/UniversLTStd-LightCn.ttf') format('truetype'),
+        url('../fonts/UniversLTStd-LightCn.svg#UniversLTStd-LightCn') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Univers LT Std 45';
+    src: url('../fonts/UniversLTStd-Bold.eot');
+    src: url('../fonts/UniversLTStd-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/UniversLTStd-Bold.woff') format('woff'),
+        url('../fonts/UniversLTStd-Bold.ttf') format('truetype'),
+        url('../fonts/UniversLTStd-Bold.svg#UniversLTStd-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+
+
+/* // End Fonts style */
+
+
+
+
+
+/*	Resets
+	------	*/
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, 
+p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, 
+img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, hr, 
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, 
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figure, figcaption, hgroup, 
+menu, footer, header, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+ul{ 
+    list-style: none;
+}
+article, aside, canvas, figure, figure img, figcaption, hgroup,
+footer, header, nav, section, audio, video {
+	display: block;
+}
+
+.clear:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0}
+a img{
+    border:0;
+}
+a,input,select,textarea{
+    outline:none;
+}
+input::-moz-focus-inner{
+    border:0; padding: 0;
+}
+
+img{
+    float: left; width: 100%;
+}
+
+/* Selection colours (easy to forget) */
+
+img::selection 		{background: transparent;}
+img::-moz-selection	{background: transparent;}
+a{text-decoration: none; display: inline-block; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; transition: all .2s ease-in-out;}
+a:hover{text-decoration: underline; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; transition: all .2s ease-in-out;}
+
+
+
+/*		Default Layout 
+-------------------------------------------------------------------------------
+*/
+
+body {background: rgb(255,255,255); color: rgb(60,60,60); -webkit-text-size-adjust: 100%; -moz-text-size-adjust:100%; -moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased; overflow-x: hidden; overflow-y:scroll;}
+
+*{-webkit-box-sizing: border-box;-moz-box-sizing:border-box; box-sizing: border-box;}
+
+.main-wrap{ float: left; width: 100%; position: relative}
+header{ float: left; width: 100%;}
+.header-top{ float: left; width: 100%; position: fixed; left: 0;top: 0;z-index: 9}
+.main-logo{ float: left; width: 406px; margin:21px 0 0 25px;}
+.main-logo img{ float: left; width: 100%;}
+.main-nav{ float: right; width: 200px; margin:22px 30px 0 0;}
+.main-nav ul{list-style: none;margin: 0; padding: 0;}
+.main-nav li{ float: left;margin-left: 21px;}
+.main-nav li:first-child{ margin-left:0px;}
+.main-nav li a{ float: left;text-decoration: none; font-size: 14px; line-height: 16px; letter-spacing: 0.5px;
+    color: #211f1f; font-family: 'Univers LT Std';}
+.main-nav li a:hover, .main-nav li.active a{ text-decoration: underline; }
+.phone-nav{ float: right;  padding: 5px;width: 42px;margin:17px 15px 0 0;/*background: #D8D8D8;*/ display: none;}
+.phone-nav > div { float: left; width:32px; height: 3px; margin: 3px 0; background: #000000;}
+
+.home-page,.about-page,.portfolio-page,.contact-page{ float: left; width: 100%;}
+.about-logo .main-logo,.portfolio-logo .main-logo,.contact-logo .main-logo{ float: left; width: 226px;}
+.main-logo img{ float: left; width: 100%;}
+.hero-section{ float: left; width: 100%; background: url(../images/home-bg.jpg)no-repeat left top; background-size: cover; height: 100vh;}
+.common-wrap{ margin: 0 auto; max-width: 780px; padding: 0 15px}
+.lead-title-text{ float: left; width: 100%; margin-top:216px; clear: both}
+.lead-title-text h2{ float: left; font-size: 36px; line-height: 40px;font-family: 'Univers LT Std'; font-weight: 300; color: #000000; text-align: justify}
+.lead-text{ float: left; margin-top: 30px; width: 100%; font-size: 18px; line-height: 26px; font-family: 'Univers LT Std'; font-weight: 300; color: #000000; text-align: justify}
+.portfolio-wrap{ float: left; width: 100%; margin-top: 91px;}
+.portfolio-item{ float: left; width: 50%;}
+.portfolio-item img{ float: left; width:100%;}
+.item-wrap{ float: left;width: 100%; margin-top: 34px;}
+.item-image{ float: left;width: 76px; margin-left: 31px;}
+.item-image img{ float: left;width:100%;}
+.more-btn{ float: right; width: auto; margin: 17px -52px 0;}
+.more-btn a{ float: left;text-decoration: none; color: #000000;font-family: 'Univers LT Std'; }
+.right-vertical{ position: fixed; right: -75px; bottom:104px; width: 208px; height: 24px; text-align: center;  -webkit-transform: rotate(90deg); -moz-transform: rotate(90deg); -ms-transform: rotate(90deg);-o-transform: rotate(90deg); transform: rotate(90deg);}
+.right-text-vertical{ float: left;width: 100%; }
+.right-text-vertical a{ float: left; text-decoration: none;width: 100%; font-size: 16px;font-family: 'Univers LT Std'; line-height: 18px; color: #000000;}
+.email-info{ float: left; width:100%;}
+.email-info a{ margin-left: 12px; text-decoration: none; color: #000000; font-size: 18px; line-height: 24px; font-family: 'Univers LT Std';}
+.email-info{ float: left; width: 100%; margin-top: 15px;}
+.inatragrame-icon{ float: left; width: 18px;margin: 6px 0 0 -3px;}
+.inatragrame-icon img{ float: left; width:100%;}
+.email-info .tel-info:nth-child(3) a:nth-child(4){ margin-left: 0px;}
+.tel-info{font-size: 18px; line-height: 22px; color: #000000; font-family: 'Univers LT Std 45'; font-weight: bold; margin: 5px 0;}
+.tel-info a{font-weight: 300;}
+.inatragrame-icon{margin-top: 4px;}
+
+
+
+
+
+
+/* =======================================================================================================
+============================================ Responsive style ========================================== */
+
+/*		Mobile Layout: 320px and 480px and more but less than or equal to 767px.
+----------------------------------------------------------------------------------
+*/
+
+@media only screen and (max-width: 767px) {
+	input[type="text"],input[type="submit"],input[type="password"],select{-webkit-appearance:none;-moz-appearance:none;appearance:none; border-radius: 0}
+    
+    .phone-nav{display: block;}
+    .homepage-parent .header-top{background: #000000;}
+    .homepage-parent .phone-nav > div{background: #D8D8D8;}
+    .header-top{background: #D8D8D8;}
+    .main-logo,.about-logo .main-logo, .portfolio-logo .main-logo, .contact-logo .main-logo{ width: 120px; margin:10px 0 5px; margin-left: 15px;}
+    .right-vertical {   bottom:25%;position: fixed;right: 30px;-webkit-transform: rotate(90deg); -moz-transform: rotate(90deg); -ms-transform: rotate(90deg);-o-transform: rotate(90deg); transform: rotate(90deg);width: 28px;}
+    .main-nav {float: left; width: 100%; /*background: #D8D8D8; */padding: 30px; 0; text-align: center; margin: 0; display: none;}
+    .main-nav li a{float: none; display: inline-block;}
+    .main-nav li{margin: 3px 0; width: 100%; display: block;}
+    .homepage-parent .main-nav li a{color: #ffffff;}
+    
+    
+    .portfolio-wrap {float: left;margin-top: 0px;padding-top: 110px;}
+    .portfolio-item {float: none; text-align: center;margin-bottom: 20px;width: 100%;}
+    .lead-title-text {width: 100%; margin-top: 0px;padding-top: 110px;}
+    .right-text-vertical a{color: #ffffff;}
+    .right-vertical{/*bottom: 50%;*/ display: none;}
+    .item-wrap{margin-top: 0;}
+    .item-image{float: none; margin: 15px auto 0; clear: both; overflow: hidden;}
+    .more-btn a{float: none;}
+    .more-btn{float: left; width: 100%; margin: 10px 0; text-align: center;}
+    .lead-text,.email-info{margin-top: 10px;}
+    
+    
+    
+    
+    
+    
+}
+
+
+
+/*		Wide Mobile Layout: 480px.
+------------------------------------------------------------
+*/
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+
+    .item-image {float: left;margin-left: 28px;}
+    .right-text-vertical a{color: #000000;}
+    .item-image{clear: none;}
+    .more-btn{width: auto; margin: 30px 0 0 20px;}
+}
+
+
+/*		Tablet Layout: 768px.
+-----------------------------------------------------------------
+*/
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	input[type="text"],input[type="submit"],input[type="password"],select{-webkit-appearance:none;-moz-appearance:none;appearance:none; border-radius: 0}
+
+    .portfolio-wrap {float: left; margin-top: 188px;}
+    .more-btn {margin-right: 0;}
+
+    .lead-title-text { padding: 0 10px;}
+    .hero-section{background-position: -330px top}
+    .item-image{margin-left: 22px;}
+    .right-vertical{display: none;}
+    
+    
+    
+    
+    
+}
+
+
+/*		Tablet Layout: 1024px.
+-----------------------------------------------------------------
+*/
+
+@media only screen and (min-width: 992px) and (max-width: 1024px) {
+	input[type="text"],input[type="submit"],input[type="password"],select{-webkit-appearance:none;-moz-appearance:none;appearance:none; border-radius: 0}
+   
+    .portfolio-wrap {float: left; margin-top: 188px; padding-bottom: 20px;}
+    /*.more-btn{ float: none; margin: 0 auto; clear: both;width: 50px;}*/
+    .item-image {float: left;margin-left: 28px;}
+    .lead-title-text {clear: both;float: left;margin-top: 238px;}
+    .hero-section{background-position: 0 top}
+    .right-vertical{bottom: 25%;}
+	
+}
+
+
+
+
+/*	Retina media query.
+	Overrides styles for devices with a 
+	device-pixel-ratio of 2+, such as iPhone 4.
+-----------------------------------------------    */
+
+@media 
+	only screen and (-webkit-min-device-pixel-ratio: 2),
+	only screen and (min-device-pixel-ratio: 2) {
+	
+	
+}
+
+
+
+
+
+
+
